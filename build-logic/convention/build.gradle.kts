@@ -10,3 +10,14 @@ dependencies{
    compileOnly(libs.ksp.gradlePlugin)
    compileOnly(libs.room.gradlePlugin)
 }
+
+gradlePlugin{
+   plugins{
+      register("androidApplication"){
+         id = "login.android.application"
+         implementationClass = "AndroidApplicationConventionPlugin"
+
+      }
+   }
+}
+

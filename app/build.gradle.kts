@@ -1,19 +1,17 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.login.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
+
 }
 
 android {
     namespace = "com.sri.login"
-    compileSdk = 34
+
 
     defaultConfig {
-        applicationId = "com.sri.login"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -30,13 +28,7 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
+
     buildFeatures {
         compose = true
     }
@@ -80,5 +72,6 @@ dependencies {
     implementation(projects.auth.domain)
     implementation(projects.auth.data)
     implementation(projects.auth.presentation)
+    implementation(kotlin("script-runtime"))
 
 }
