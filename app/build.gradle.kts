@@ -67,4 +67,18 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Timber
+    implementation(libs.timber)
+
+    implementation(projects.core.domain)
+    implementation(projects.core.presentation.designsystem)
+    implementation(projects.core.presentation.ui)
+    implementation(projects.core.data)
+    implementation(projects.core.database)
+
+    implementation(projects.auth.domain)
+    implementation(projects.auth.data)
+    implementation(projects.auth.presentation)
+
 }
