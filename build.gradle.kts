@@ -7,3 +7,4 @@ plugins {
     alias(libs.plugins.compose.compiler) apply false
 }
 
+gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:testClasses"))
