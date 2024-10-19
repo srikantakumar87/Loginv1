@@ -154,6 +154,7 @@ login-android-application-compose = {id="login.android.application.compose", ver
 login-android-library = {id="login.android.library", version = "unspecified"}
 login-android-library-compose = {id="login.android.library.compose", version = "unspecified"}
 login-android-feature-ui = {id="login.android.feature.ui", version = "unspecified"}
+login-android-room = {id="login.android.room", version = "unspecified"}
 
 
 
