@@ -44,6 +44,11 @@ gradlePlugin{
          implementationClass = "AndroidRoomConventionPlugin"
 
       }
+      register("jvmLibrary"){
+         id = "login.jvm.library"
+         implementationClass = "JvmLibraryConventionPlugin"
+
+      }
    }
 
 }
