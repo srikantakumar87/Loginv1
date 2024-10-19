@@ -29,6 +29,16 @@ gradlePlugin{
          implementationClass = "AndroidLibraryConventionPlugin"
 
       }
+      register("androidLibraryCompose"){
+         id = "login.android.library.compose"
+         implementationClass = "AndroidLibraryComposeConventionPlugin"
+
+      }
+      register("androidFeatureUi"){
+         id = "login.android.feature.ui"
+         implementationClass = "AndroidFeatureUiConventionPlugin"
+
+      }
    }
 
 }
