@@ -150,6 +150,7 @@ mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 login-android-application = {id="login.android.application", version = "unspecified"}
+login-android-application-compose = {id="login.android.application.compose", version = "unspecified"}
 
 
 
