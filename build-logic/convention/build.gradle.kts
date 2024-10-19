@@ -1,3 +1,4 @@
+@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
    `kotlin-dsl`
 }
@@ -21,6 +22,11 @@ gradlePlugin{
       register("androidApplicationCompose"){
          id = "login.android.application.compose"
          implementationClass = "AndroidApplicationComposeConventionPlugin"
+
+      }
+      register("androidLibrary"){
+         id = "login.android.library"
+         implementationClass = "AndroidLibraryConventionPlugin"
 
       }
    }

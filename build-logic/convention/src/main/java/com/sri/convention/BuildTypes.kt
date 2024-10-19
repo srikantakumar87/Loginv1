@@ -1,18 +1,21 @@
 package com.sri.convention
 
 import com.android.build.api.dsl.ApplicationExtension
-import com.android.build.api.dsl.BuildType
 import com.android.build.api.dsl.CommonExtension
-import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.Project
+import com.android.build.api.dsl.BuildType
 import org.gradle.kotlin.dsl.configure
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
+
+
+
 
 internal fun Project.configureBuildTypes(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
     extensionType: ExtensionType
-
-    )
-{
+){
     commonExtension.run{
 
         buildFeatures{
@@ -21,41 +24,42 @@ internal fun Project.configureBuildTypes(
 
         val apiKey = gradleLocalProperties(rootDir, rootProject.providers).getProperty("API_KEY")
         when(extensionType){
-            ExtensionType.APPLICATION -> {
+            ExtensionType.APPLICATION ->{
                 extensions.configure<ApplicationExtension>{
                     buildTypes{
-                        debug {
-
-                            configureDebugBuildType(apiKey)
+                        debug{
+                            configureDebugBuildType("apiKey")
 
                         }
-                        release {
+                        release{
                             configureReleaseBuildType(commonExtension, apiKey)
 
                         }
                     }
+
+
                 }
-
             }
-            ExtensionType.LIBRARY -> {
-                extensions.configure<ApplicationExtension>{
+            ExtensionType.LIBRARY ->{
+                extensions.configure<LibraryExtension>{
                     buildTypes{
-                        debug {
-                            configureDebugBuildType(apiKey)
+                        debug{
+                            configureDebugBuildType("apiKey")
 
                         }
-                        release {
+                        release{
                             configureReleaseBuildType(commonExtension, apiKey)
 
                         }
                     }
+
+
                 }
             }
 
         }
 
     }
-
 }
 
 private fun BuildType.configureDebugBuildType(apiKey: String){

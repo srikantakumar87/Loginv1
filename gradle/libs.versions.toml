@@ -151,6 +151,7 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 
 login-android-application = {id="login.android.application", version = "unspecified"}
 login-android-application-compose = {id="login.android.application.compose", version = "unspecified"}
+login-android-library = {id="login.android.library", version = "unspecified"}
 
 
 
