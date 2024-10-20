@@ -1,6 +1,7 @@
 plugins {
 
     alias(libs.plugins.login.android.application.compose)
+    alias(libs.plugins.login.jvm.ktor)
     alias(libs.plugins.compose.compiler)
 
 }

@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.login.android.library)
+    alias(libs.plugins.login.jvm.ktor)
 }
 
 android {
