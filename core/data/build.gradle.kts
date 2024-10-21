@@ -19,4 +19,10 @@ dependencies {
     implementation(projects.core.domain)
     implementation(projects.core.database)
 
+    implementation(platform(libs.androidx.compose.bom))   // Align versions with BOM
+    implementation("androidx.compose.runtime:runtime:1.7.4") // Add Compose runtime
+    //implementation(libs.compose.run.time)
+    //implementation(libs.compose.ui)
+    // Other dependencies
+
 }
