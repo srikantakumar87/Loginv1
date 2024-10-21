@@ -9,9 +9,6 @@ import org.gradle.kotlin.dsl.configure
 import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 
 
-
-
-
 internal fun Project.configureBuildTypes(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
     extensionType: ExtensionType
